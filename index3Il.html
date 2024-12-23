@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+        <title>Форма</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100..900&display=swap');
+        </style>    
+</head>
+
+<body class="container">
+    <main>
+        <div class="forma">
+            <h1 class="main__h1">
+                Разоаботка веб-приложения
+            </h1>
+            <p>
+                Заполните форму и мы обязательно свяжемся с вами в ближайшее вермя для уточнения деталей
+            </p>
+            <div class="form">
+                <form action="" id="Form">
+                    <p>
+                        <label for="fullName">
+                            Как вас зовут
+                            <input type="text" placeholder="Наумов Ярослав Денисович" id="fullName" required>
+                        </label>
+                    </p>
+                    <p>
+                        <label for="e-mail">
+                            Ваш e-mail
+                            <input type="email" placeholder="Yaroslav.naumov10000-7@yandex.ru" id="email" required>
+                        </label>
+                    </p>
+                    <p>
+                        <label for="Phone number">
+                            Телефон
+                            <input type="tel" id="phone" placeholder="+7 (999) 999-99-99"  required pattern="\+?[0-9]{10,15}">
+                        </label>
+                    </p>
+                    <p>
+                        <label for="Countries">
+                            Страна
+                            <select name="Страны" id="Contries">
+                                <option value="Russia">
+                                    Россия
+                                </option>
+                                <option value="Usa">
+                                    США
+                                </option>
+                                <option value="China">
+                                    Китай
+                                </option>
+                                <option value="France">
+                                    Франция
+                                </option>
+                                <option value="Portugal">
+                                    Португалия
+                                </option>
+                                <option value="Italy">
+                                    Италия
+                                </option>
+                            </select>
+                        </label>
+                    </p>
+                    <p>
+                        <label for="date">
+                            Дата
+                            <input type="date" id="date" name="date" required>
+                        </label>
+                    </p>
+                    <p>
+                        Комментарий
+                        <label for="comments">
+                            <textarea name="comments" id="comments">
+                                
+                            </textarea>
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            <input type="checkbox" name="option1" value="1">
+                            Согласен на обработку моих персональных данных
+                        </label>
+                    </p>
+                    <button type="submit">
+                        Отправить заявку
+                    </button>
+                    
+                    <div id="errorMessages" style="color: red;"></div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script>
+        $(document).ready(function(){
+            $('#phone').mask('+7 (999) 999-99-99');
+        });
+    </script>    <script src="scriptIl.js"></script>
+</body>
+
+</html>
